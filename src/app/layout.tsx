@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 
 import { TRPCReactProvider } from "@/trpc/react";
+import Link from "next/link";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,6 +24,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${inter.variable}`}>
+        <header className="m-3 font-serif text-5xl font-bold text-stone-500">
+          The Cooking Hub
+        </header>
+        <nav className="flex flex-row items-center justify-center gap-20">
+          <p className="rounded-lg border bg-amber-700 px-3">
+            <Link href="/">Home</Link>
+          </p>
+          <p className="rounded-lg border bg-amber-700 px-3">
+            <Link href="chefs">Chefs</Link>
+          </p>
+          <p className="rounded-lg border bg-amber-700 px-3">
+            <Link href="recipes">Recipes</Link>
+          </p>
+          <p className="rounded-lg border bg-amber-700 px-3">
+            <Link href="account">Acccout</Link>
+          </p>
+        </nav>
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
