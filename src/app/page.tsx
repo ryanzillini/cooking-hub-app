@@ -16,7 +16,7 @@ export default async function Home() {
         <Image
           src={picture}
           alt="sabrina-witch"
-          className="fill absolute h-full w-full object-cover mix-blend-overlay"
+          className="absolute h-full w-full object-cover mix-blend-overlay"
         />
         <div className="mt-20">
           <h1 className="text-center font-serif text-4xl font-extrabold text-white">

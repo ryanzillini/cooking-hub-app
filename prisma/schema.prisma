@@ -62,6 +62,7 @@ model User {
     accounts      Account[]
     sessions      Session[]
     posts         Post[]
+    chef          Boolean?
 }
 
 model VerificationToken {
